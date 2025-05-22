@@ -1,4 +1,3 @@
-// Navbar.jsx
 import React, { useState } from "react";
 import {
   AppBar,
@@ -11,7 +10,6 @@ import {
   ListItemText,
   useMediaQuery,
   useTheme,
-  Typography,
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { Link, useLocation } from "react-router-dom";
@@ -24,8 +22,17 @@ const navItems = [
   { name: "Contact", path: "/home/contact" },
 ];
 
-
-const MotionBox = motion(Box);
+// Animation variant for bouncing text
+const bounceVariant = {
+  initial: { y: -200 },
+  animate: {
+    y: [0, -30, 0, -15, 0, -5, 0],
+    transition: {
+      duration: 1.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -47,9 +54,24 @@ export default function Navbar() {
         }}
       >
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-            Aryan Bisht
-          </Typography>
+          <motion.div
+            initial={{ y: -50 }}
+            animate={{
+              y: [-32, 0,-16, 0, -8, 0,-4,0,-2, 0],
+            }}
+            transition={{
+              duration: 1,
+              ease: "easeOut",
+            }}
+          >
+            <Box
+              component="span"
+              sx={{ fontSize: "1.5rem", fontWeight: "bold", color: "white" }}
+            >
+              Aryan Bisht
+            </Box>
+          </motion.div>
+
 
           {isMobile ? (
             <IconButton onClick={toggleDrawer}>
@@ -64,9 +86,7 @@ export default function Navbar() {
                     style={{
                       textDecoration: "none",
                       color:
-                        location.pathname === item.path
-                          ? "white"
-                          : "white",
+                        location.pathname === item.path ? "white" : "white",
                       fontWeight: "500",
                     }}
                   >

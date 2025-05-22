@@ -160,7 +160,7 @@ function ContactScreen() {
             <motion.div custom={4} variants={fadeUp} className="col-span-2 mt-5">
               <button
                 type="submit"
-                className="w-full py-3 bg-neutral-300 text-black font-semibold rounded-md hover:bg-gray-200 transition duration-300"
+                className="w-full py-3 bg-neutral-300 text-neutral-200 font-semibold rounded-md hover:bg-gray-200 transition duration-300"
               >
                 Send Message
               </button>
