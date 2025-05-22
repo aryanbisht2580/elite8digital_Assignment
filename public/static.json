@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "path": "/*",
+      "rewrite": "/index.html"
+    }
+  ]
+}
