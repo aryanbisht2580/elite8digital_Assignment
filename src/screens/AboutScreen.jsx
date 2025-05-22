@@ -1,23 +1,19 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import  pic from "../assets/pic.png"; // Import your image here
+import  pic from "../assets/pic.png"; 
 import Rain from "../Components/Rain";
 const skills = [
   { name: "React.js", level: 90 },
-  { name: "Next.js", level: 85 },
-  { name: "Tailwind CSS", level: 95 },
+  { name: "Node.js", level: 80 },
+  { name: "Tailwind CSS", level: 90 },
   { name: "MongoDB", level: 80 },
   { name: "PostgreSQL", level: 75 },
-  { name: "Firebase", level: 85 },
   { name: "Framer Motion", level: 80 },
   { name: "React Native", level: 70 },
+  { name: "SpringBoot", level: 60 },
 ];
 
 export default function AboutScreen() {
-  const [show, setShow] = useState(true);
-  // useEffect(() => {
-  //   setShow(true);
-  // }, []);
 
   return (
     <div className="min-h-screen  text-white p-8 mt-20">
@@ -48,32 +44,32 @@ export default function AboutScreen() {
         </motion.div>
 
         <motion.div
-  initial={{ opacity: 0, x: 50 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 1 }}
-  className="space-y-6"
->
-  <h1 className="text-4xl font-extrabold leading-tight text-left">
-    Aryan Bisht
-  </h1>
-  <h3 className="text-xl font-semibold text-neutral-300">
-    Full Stack Developer | React & React Native Specialist
-  </h3>
-  <p className="text-gray-300 text-justify">
-    I build modern, high-performance web and mobile applications with a focus on clean code and seamless user experience. Leveraging over two years of professional experience, I excel in React.js, Next.js, and backend databases like MongoDB and Firebase.
-  </p>
-  <p className="text-gray-300 text-justify">
-    Currently, I’m expanding my skills by mastering animation libraries like Framer Motion and enhancing cross-platform development with React Native. I enjoy solving complex problems and turning ideas into elegant, functional products.
-  </p>
-  <div className="text-gray-400">
-    <h4 className="font-semibold mb-2">Beyond Development</h4>
-    <ul className="list-disc list-inside space-y-1 flex flex-col items-start">
-      <li>Football enthusiast and team player</li>
-      <li>UI/UX design admirer, always learning</li>
-      <li>Instrumental music lover — a source of creativity and focus</li>
-    </ul>
-  </div>
-</motion.div>
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="space-y-6"
+        >
+          <h1 className="text-4xl font-extrabold leading-tight text-left">
+            Aryan Bisht
+          </h1>
+          <h3 className="text-xl font-semibold text-neutral-300">
+            Full Stack Developer | React & React Native Specialist
+          </h3>
+          <p className="text-gray-300 text-justify">
+            I build modern, high-performance web and mobile applications with a focus on clean code and seamless user experience. Leveraging over two years of professional experience, I excel in React.js, Next.js, and backend databases like MongoDB and Firebase.
+          </p>
+          <p className="text-gray-300 text-justify">
+            Currently, I’m expanding my skills by mastering animation libraries like Framer Motion and enhancing cross-platform development with React Native. I enjoy solving complex problems and turning ideas into elegant, functional products.
+          </p>
+          <div className="text-gray-400">
+            <h4 className="font-semibold mb-2">Beyond Development</h4>
+            <ul className="list-disc list-inside space-y-1 flex flex-col items-start">
+              <li>Football enthusiast and team player</li>
+              <li>UI/UX design admirer, always learning</li>
+              <li>Instrumental music lover — a source of creativity and focus</li>
+            </ul>
+          </div>
+        </motion.div>
 
 
       </div>

@@ -3,7 +3,6 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import Rain from '../Components/Rain';
 import { motion } from 'framer-motion';
 
-// Animation Variants
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i = 1) => ({
@@ -29,14 +28,11 @@ const staggerContainer = {
 function ContactScreen() {
   return (
     <div className="relative pt-20 min-h-screen overflow-hidden bg-gradient-to-br from-[#1b1b1b] to-[#2c2c2c] flex items-center justify-center px-6">
-      {/* Rain effect behind everything */}
+     
       <div className="absolute inset-0 z-10 pointer-events-none">
         <Rain />
       </div>
-
-      {/* Main content container */}
       <div className="relative z-20 w-full max-w-7xl text-white px-6 py-12">
-        {/* Contact Info Section */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -81,7 +77,6 @@ function ContactScreen() {
           ))}
         </motion.div>
 
-        {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}

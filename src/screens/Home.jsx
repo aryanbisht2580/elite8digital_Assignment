@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Rain from "../Components/Rain";
-import "./Home.css"; // Assuming you have a CSS file for styles
-// ... your container and variants unchanged ...
+import "./Home.css"; 
 const container = {
   hidden: {},
   show: {
@@ -21,7 +20,6 @@ const Home = () => {
   const navigate = useNavigate();
   const heading = "Design. Code. Create.";
   useEffect(() => {
-    // Disable scrolling on mount
     document.body.style.overflow = "hidden";
 
     // Re-enable scrolling on unmount
@@ -33,10 +31,8 @@ const Home = () => {
   return (
     <div className="Outerdiv relative min-h-screen w-full bg-gradient-to-br overflow-hidden flex items-center justify-center px-6">
       
-      {/* Rain effect */}
       <Rain />
 
-      {/* Existing animated blobs */}
       <motion.div
         className="absolute w-[300px] h-[300px] opacity-30 top-[-100px] left-[-100px] blur-3xl"
         animate={{ y: [0, 30, 0] }}
@@ -48,7 +44,6 @@ const Home = () => {
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Content */}
       <motion.div
         className="z-10 max-w-4xl text-center"
         variants={container}
