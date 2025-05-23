@@ -12,7 +12,7 @@ This is a modern, multi-page personal portfolio website created as part of a cre
 - **React.js** – JavaScript library for building interactive UIs
 - **Tailwind CSS** – Utility-first CSS framework for rapid UI development
 - **Framer Motion** – Powerful animation library for React
-- **Vite** – Blazing fast frontend tooling (optional if used)
+- **Vite** – Blazing fast frontend tooling 
 
 ## 📄 Pages & Features
 
